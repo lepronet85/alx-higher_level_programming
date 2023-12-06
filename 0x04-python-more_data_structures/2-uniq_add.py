@@ -3,7 +3,7 @@ def uniq_add(my_list=[]):
     track_list = []
     result = 0
     for elem in my_list:
-        if elem in track_list:
+        if elem not in track_list:
             result += elem
             track_list.append(elem)
     return result
