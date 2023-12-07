@@ -4,11 +4,11 @@ void print_py_list(PyObject *p);
 void print_pyinfo_bytes(PyObject *p);
 
 /**
- * print_py_list - Prints basic info about Python lists.
+ * print_python_list - Prints basic info about Python lists.
  * @p: A PyObject list object.
  * Return: Nothing (void)
  */
-void print_py_list(PyObject *p)
+void print_python_list(PyObject *p)
 {
   int size, alloc, i;
   const char *type;
@@ -32,11 +32,11 @@ void print_py_list(PyObject *p)
 }
 
 /**
- * print_pyinfo_bytes - Prints basic info about Python byte objects.
+ * print_python_bytes - Prints basic info about Python byte objects.
  * @p: A PyObject byte object.
  * Return: Nothing (void)
  */
-void print_pyinfo_bytes(PyObject *p)
+void print_python_bytes(PyObject *p)
 {
   unsigned char i, size;
   PyBytesObject *bytes = (PyBytesObject *)p;
