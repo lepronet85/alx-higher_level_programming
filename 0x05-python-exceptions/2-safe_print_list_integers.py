@@ -8,6 +8,6 @@ def safe_print_list_integers(my_list=[], x=0):
                 print("{:d}".format(item), end='')
                 printed_integers += 1
         print()
-    except TypeError:
+    except (ValueError, TypeError):
         pass
     return printed_integers
