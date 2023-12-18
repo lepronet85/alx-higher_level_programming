@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-def safe_print_integer_err(value):
-    integer_value = int(value)
+def safe_print_integer_err(value):)
     try:
-        print("{:d}".format(integer_value))
+        print("{:d}".format(value))
     except (ValueError, TypeError) as ve:
         import sys
         print("Exception: {}".format(ve), file=sys.stderr)
