@@ -3,11 +3,11 @@
 def safe_print_list_integers(my_list=[], x=0):
     printed_integers = 0
     try:
-        for item in my_list[:x]:
-            if isinstance(item, int):
-                print("{:d}".format(item), end='')
+        for i in range(x):
+            if isinstance(my_list[i], int):
+                print("{:d}".format(my_list[i]), end=' ')
                 printed_integers += 1
         print()
-    except (ValueError, TypeError):
+    except IndexError:
         pass
     return printed_integers
