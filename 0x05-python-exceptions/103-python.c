@@ -1,15 +1,14 @@
 #include <Python.h>
 
-void display_python_list_info(PyObject *p);
-void display_python_bytes_info(PyObject *p);
-void display_python_float_info(PyObject *p);
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
+void print_python_float(PyObject *p);
 
 /**
- * display_python_list_info - Outputs essential details of Python lists.
- * @p: A Python list object.
- * Return: Nothing (void)
+ * print_python_list - Prints basic info about Python lists.
+ * @p: A PyObject list object.
  */
-void display_python_list_info(PyObject *p)
+void print_python_list(PyObject *p)
 {
 	Py_ssize_t size, alloc, i;
 	const char *type;
@@ -36,18 +35,17 @@ void display_python_list_info(PyObject *p)
 		type = list->ob_item[i]->ob_type->tp_name;
 		printf("Element %ld: %s\n", i, type);
 		if (strcmp(type, "bytes") == 0)
-			display_python_bytes_info(list->ob_item[i]);
+			print_python_bytes(list->ob_item[i]);
 		else if (strcmp(type, "float") == 0)
-			display_python_float_info(list->ob_item[i]);
+			print_python_float(list->ob_item[i]);
 	}
 }
 
 /**
- * display_python_bytes_info - Outputs essential details of Python byte objects.
- * @p: A Python byte object.
- * Return: Nothing (void)
+ * print_python_bytes - Prints basic info about Python byte objects.
+ * @p: A PyObject byte object.
  */
-void display_python_bytes_info(PyObject *p)
+void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size, i;
 	PyBytesObject *bytes = (PyBytesObject *)p;
@@ -81,11 +79,10 @@ void display_python_bytes_info(PyObject *p)
 }
 
 /**
- * display_python_float_info - Outputs essential details of Python float objects.
- * @p: A Python float object.
- * Return: Nothing (void)
+ * print_python_float - Prints basic info about Python float objects.
+ * @p: A PyObject float object.
  */
-void display_python_float_info(PyObject *p)
+void print_python_float(PyObject *p)
 {
 	char *buffer = NULL;
 
