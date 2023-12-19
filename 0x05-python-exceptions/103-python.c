@@ -1,14 +1,18 @@
 #include <Python.h>
 
-void print_python_list(PyObject *p);
-void print_python_bytes(PyObject *p);
-void print_python_float(PyObject *p);
+#include <stdio.h>
+#include <string.h>
+
+
+void display_python_list_info(PyObject *p);
+void display_python_bytes_info(PyObject *p);
+void display_python_float_info(PyObject *p);
 
 /**
- * print_python_list - Displays essential details of Python lists.
- * @p: An object representing a Python list.
+ * display_python_list_info - Outputs essential details of Python lists.
+ * @p: A Python list object.
  */
-void print_python_list(PyObject *p) {
+void display_python_list_info(PyObject *p) {
     Py_ssize_t size, alloc, i;
     const char *type;
     PyListObject *list = (PyListObject *)p;
@@ -19,7 +23,7 @@ void print_python_list(PyObject *p) {
 
     fflush(stdout);
 
-    printf("[*] Python list information\n");
+    printf("[*] Information about Python list\n");
     if (strcmp(p->ob_type->tp_name, "list") != 0) {
         printf(" [ERROR] Invalid List Object\n");
         return;
@@ -32,23 +36,23 @@ void print_python_list(PyObject *p) {
         type = list->ob_item[i]->ob_type->tp_name;
         printf("Element %ld: %s\n", i, type);
         if (strcmp(type, "bytes") == 0)
-            print_python_bytes(list->ob_item[i]);
+            display_python_bytes_info(list->ob_item[i]);
         else if (strcmp(type, "float") == 0)
-            print_python_float(list->ob_item[i]);
+            display_python_float_info(list->ob_item[i]);
     }
 }
 
 /**
- * print_python_bytes - Displays essential details of Python byte objects.
- * @p: An object representing a Python byte object.
+ * display_python_bytes_info - Outputs essential details of Python byte objects.
+ * @p: A Python byte object.
  */
-void print_python_bytes(PyObject *p) {
+void display_python_bytes_info(PyObject *p) {
     Py_ssize_t size, i;
     PyBytesObject *bytes = (PyBytesObject *)p;
 
     fflush(stdout);
 
-    printf("[.] bytes object information\n");
+    printf("[.] Information about bytes object\n");
     if (strcmp(p->ob_type->tp_name, "bytes") != 0) {
         printf(" [ERROR] Invalid Bytes Object\n");
         return;
@@ -73,17 +77,17 @@ void print_python_bytes(PyObject *p) {
 }
 
 /**
- * print_python_float - Displays essential details of Python float objects.
- * @p: An object representing a Python float object.
+ * display_python_float_info - Outputs essential details of Python float objects.
+ * @p: A Python float object.
  */
-void print_python_float(PyObject *p) {
+void display_python_float_info(PyObject *p) {
     char *buffer = NULL;
 
     PyFloatObject *float_obj = (PyFloatObject *)p;
 
     fflush(stdout);
 
-    printf("[.] float object information\n");
+    printf("[.] Information about float object\n");
     if (strcmp(p->ob_type->tp_name, "float") != 0) {
         printf(" [ERROR] Invalid Float Object\n");
         return;
