@@ -1,2 +1,1 @@
-Section 2
-Python projects repository
+0x06-python-classes
