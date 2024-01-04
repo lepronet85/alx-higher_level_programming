@@ -1,43 +1,31 @@
 #!/usr/bin/python3
 
+"""Defines a Rectangle class."""
 
 class Rectangle:
-    """
-    Defines a rectangle based on width and height.
-
-    Attributes:
-        width (int): Width of the rectangle.
-        height (int): Height of the rectangle.
-    """
+    """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """
-        Initializes a Rectangle instance with optional width and height.
+        """Initialize a new Rectangle.
 
         Args:
-            width (int): Width of the rectangle (default is 0).
-            height (int): Height of the rectangle (default is 0).
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """
-        Getter method to retrieve the width of the rectangle.
-
-        Returns:
-            int: Width of the rectangle.
-        """
+        """Get/set the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        Setter method to set the width of the rectangle.
+        """Set the width of the rectangle.
 
         Args:
-            value (int): Value to set as the width.
+            value (int): The width value to be set.
 
         Raises:
             TypeError: If width is not an integer.
@@ -51,21 +39,15 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Getter method to retrieve the height of the rectangle.
-
-        Returns:
-            int: Height of the rectangle.
-        """
+        """Get/set the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        Setter method to set the height of the rectangle.
+        """Set the height of the rectangle.
 
         Args:
-            value (int): Value to set as the height.
+            value (int): The height value to be set.
 
         Raises:
             TypeError: If height is not an integer.
