@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 import sys
 
 
@@ -11,12 +9,12 @@ def init_board(n):
 
 
 def board_deepcopy(board):
-    """Return a deepcopy of a chessboard."""
+    """Create a deep copy of a chessboard."""
     return [row[:] for row in board]
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
+    """Retrieve the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -27,7 +25,7 @@ def get_solution(board):
 
 
 def xout(board, row, col):
-    """X out spots on a chessboard."""
+    """Mark spots on a chessboard as non-attackable."""
     for c in range(col + 1, len(board)):
         board[row][c] = "x"
     for c in range(col - 1, -1, -1):
