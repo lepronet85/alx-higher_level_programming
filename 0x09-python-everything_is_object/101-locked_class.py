@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 
 
-class LockedClass:
-    """A class that allows only 'first_name' attribute assignment."""
 
+class LockedClass():
+    """Class to prevent dynamic attributes creation"""
     __slots__ = ['first_name']
 
+    def __init__(self):
+        """Init method"""
+        pass
+
     def __setattr__(self, name, value):
-        """Set attribute 'first_name', disallowing any other attribute."""
+        """Prevent dynamic attribute creation"""
         if name != 'first_name':
             raise AttributeError("'LockedClass' object has no attribute '{}'"
-                     .format(name))
-        self.__dict__[name] = value
+                                 .format(name))
+        super().__setattr__(name, value)
