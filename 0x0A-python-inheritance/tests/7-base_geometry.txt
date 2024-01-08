@@ -1,0 +1,34 @@
+The module has a class BaseGeometry that:
+    - Implements a public instance method area(self) that raises an Exception with the message area() is not implemented.
+    - Implements a public instance method integer_validator(self, name, value) that validates a value:
+        - Assumes name is always a string.
+        - Raises a TypeError if value is not an integer, with the message '<name> must be an integer'.
+        - Raises a ValueError if value is less than or equal to 0, with the message '<name> must be greater than 0'.
+
+>>> bg = BaseGeometry()
+
+# Validating integer values
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+# Invalid value: not an integer
+>>> try:
+...     bg.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+# Invalid value: less than or equal to 0
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+# Invalid value: less than or equal to 0
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
