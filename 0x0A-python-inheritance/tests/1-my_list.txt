@@ -1,4 +1,5 @@
 # 1-my_list.txt
+# Lepronet85 <abdoulazizsoumana85@gmail.com>
 
 =======================
 How to Use 1-my_list.py
