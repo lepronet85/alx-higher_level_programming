@@ -2,7 +2,7 @@
 """
 Module: 100-my_int
 
-Contains a class MyInt that inherits from int, inverting the == 
+Contains a class MyInt that inherits from int, inverting the ==
 and != operators.
 """
 
