@@ -14,19 +14,17 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    punctuation_chars = ".?:"
-    lines = []
-    current_line = ""
+    i = 0
+    while i < len(text) and text[i] == ' ':
+        i += 1
 
-    for char in text:
-        current_line += char
-        if char in punctuation_chars:
-            lines.append(current_line.strip())
-            current_line = ""
-
-    if current_line:
-        lines.append(current_line.strip())
-
-    for line in lines:
-        print(line)
-        print()
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] == "\n" or text[i] in ".?:":
+            if text[i] in ".?:":
+                print("\n")
+            i += 1
+            while i < len(text) and text[i] == ' ':
+                i += 1
+            continue
+        i += 1
