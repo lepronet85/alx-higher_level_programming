@@ -50,3 +50,17 @@ Write a function that prints a text with 2 new lines after each of these charact
 - text must be a string, otherwise raise a TypeError exception with the message text must be a string
 - There should be no space at the beginning or at the end of each printed line
 - You are not allowed to import any module
+
+## 5. Max integer - Unittest
+
+Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.
+
+In this task, you will write unittests for the function def max_integer(list=[]):.
+
+- Your test file should be inside a folder tests
+- You have to use the unittest module
+- Your test file should be python files (extension: .py)
+- Your test file should be executed by using this command: python3 -m unittest tests.6-max_integer_test
+- All tests you make must be passable by the function below
+- We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
