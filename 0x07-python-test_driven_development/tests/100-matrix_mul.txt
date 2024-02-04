@@ -44,3 +44,21 @@ TypeError: matrix_mul() missing 2 required positional arguments:
 Traceback (most recent call last):
 TypeError: matrix_mul() missing 2 required positional arguments: 
 'm_a' and 'm_b'
+>>> m_a = [
+... [1, 2],
+... [3, 4],
+... ]
+>>> m_b = [
+... [1, 2],
+... [2, 3],
+... [4, 5]
+... ]
+>>> print(matrix_mul(m_a, m_b))
+Traceback (most recent call last):
+ValueError: m_a and m_b can't be multiplied
+>>> print(matrix_mul([], [[1, 2]]))
+Traceback (most recent call last):
+ValueError: m_a can't be empty
+>>> print(matrix_mul([[1, 2]], [[]]))
+Traceback (most recent call last):
+ValueError: m_b can't be empty
