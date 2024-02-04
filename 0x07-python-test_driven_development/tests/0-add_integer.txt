@@ -1,44 +1,18 @@
-def add_integer(a, b=98):
-    """
-    Adds two integers.
+# Test for the add_integer function
 
-    Args:
-        a (int): First integer or float.
-        b (int): Second integer or float. Defaults to 98.
+This function adds two integers.
 
-    Returns:
-        int: Sum of a and b.
-
-    Raises:
-        TypeError: If a or b is not an integer or float.
-        
-    Examples:
-    >>> add_integer(2, 3)
-    5
-
-    >>> add_integer(4.5, 3.8)
-    7
-
-    >>> add_integer(5)
-    103
-
-    >>> add_integer(5.5)
-    103
-
-    >>> add_integer(5.5, 2)
-    7
-
-    >>> add_integer(5, "abc")
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer or b must be an integer
-    """
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise TypeError("a must be an integer or b must be an integer")
-    
-    return int(a) + int(b)
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
-
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
