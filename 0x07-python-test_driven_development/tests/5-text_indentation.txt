@@ -69,3 +69,9 @@ Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 >>> text_indentation(3)
 Traceback (most recent call last):
 TypeError: text must be a string
+>>> text_indentation({"one": 1, "two": 2})
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
