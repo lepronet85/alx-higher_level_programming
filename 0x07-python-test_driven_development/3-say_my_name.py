@@ -3,15 +3,10 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """
-    Prints the full name. 
-
-    Arguments:
-        @first_name: The first name.
-        @last_name: The last name. Defaults to an empty string.
-
-    Raises:
-        TypeError: If first_name or last_name is not a string.
+    """ rints the full name.
+        Arguments:
+            @first_name: first name to be printed
+            @second_name: last_name to be printed
     """
 
     if type(first_name) is not str:
