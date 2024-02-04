@@ -3,10 +3,9 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """
-    Prints the full name.
+    """Prints the full name. 
 
-    Argments:
+    Arguments:
         @first_name: The first name.
         @last_name: The last name. Defaults to an empty string.
 
