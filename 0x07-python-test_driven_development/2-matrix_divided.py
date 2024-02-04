@@ -37,14 +37,3 @@ def divide_matrix(matrix, divisor):
         [round(element / divisor, 2) for element in row]
         for row in matrix
     ]
-
-# Exemple d'utilisation
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-divisor = 2
-result = divide_matrix(matrix, divisor)
-print(result)
-
