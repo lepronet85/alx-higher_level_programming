@@ -1,0 +1,9 @@
+{
+  "name": "javascript-warm-up",
+  "devDependencies": {
+    "semistandard": "*"
+  },
+  "scripts": {
+    "test": "semistandard && node my-normal-tests-littered-with-semicolons.js"
+  }
+}
