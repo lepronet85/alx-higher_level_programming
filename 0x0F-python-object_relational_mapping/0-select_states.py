@@ -9,7 +9,6 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    # Establishing a connection to the MySQL database
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     # Creating a cursor object
     c = db.cursor()
