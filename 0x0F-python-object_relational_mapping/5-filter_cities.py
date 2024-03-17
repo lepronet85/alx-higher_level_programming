@@ -19,6 +19,6 @@ if __name__ == "__main__":
     # Extracting and joining the names of cities belonging to
     # the specified state
     cities_of_state = [city[2]
-                        for city in c.fetchall()
-                        if city[4] == sys.argv[4]]
+                       for city in c.fetchall()
+                       if city[4] == sys.argv[4]]
     print(", ".join(cities_of_state))
