@@ -14,7 +14,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     # Creating a cursor object
     c = db.cursor()
-    # Executing the SQL query to select states where the name matches the argument
+    # Executing the SQL query to select states where the name matches
     c.execute("""SELECT * FROM states
                 WHERE name LIKE BINARY '{}'
                 ORDER BY states.id ASC""".format(sys.argv[4]).strip("'"))
