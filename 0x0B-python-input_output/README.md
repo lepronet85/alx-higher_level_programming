@@ -30,3 +30,9 @@ Write a function that appends a string at the end of a text file (UTF8) and retu
 - You don’t need to manage file permission or file doesn't exist exceptions.
 - You are not allowed to import any module
 
+## 3. To JSON string
+
+Write a function that returns the JSON representation of an object (string):
+
+- Prototype: def to_json_string(my_obj):
+- You don’t need to manage exceptions if the object can’t be serialized.
