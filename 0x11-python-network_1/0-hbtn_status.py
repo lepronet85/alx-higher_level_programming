@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Fetches the status from https://intranet.hbtn.io/status"""
+
 from urllib import request
 
 if __name__ == "__main__":
