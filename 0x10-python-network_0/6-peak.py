@@ -31,6 +31,6 @@ def find_peak(list_of_integers):
         return find_peak(list_of_integers[:mid])
     # If the middle element is not a peak and is greater than or
     # equal to its left neighbor,
-    # recursively search the right half of the list for a peak
+    # recursively search the right half of the list for a peak.
     else:
         return find_peak(list_of_integers[mid + 1:])
